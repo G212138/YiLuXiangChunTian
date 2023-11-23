@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "baise",
+    "texture": "263b0b0d-4360-4562-bd63-bd3663cde01b",
+    "atlas": "",
+    "rect": [
+      2,
+      0,
+      170,
+      101
+    ],
+    "offset": [
+      -2.5,
+      2.5
+    ],
+    "originalSize": [
+      179,
+      106
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

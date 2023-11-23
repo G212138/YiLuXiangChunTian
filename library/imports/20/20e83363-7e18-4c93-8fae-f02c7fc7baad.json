@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "sisi",
+    "texture": "07f882dd-651b-4599-af89-4628bfcad5ff",
+    "atlas": "",
+    "rect": [
+      3,
+      2,
+      1527,
+      665
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      1533,
+      670
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

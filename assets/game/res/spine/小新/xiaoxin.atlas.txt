@@ -1,0 +1,118 @@
+
+xiaoxin.png
+size: 1655,752
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+mao_1
+  rotate: false
+  xy: 2, 2
+  size: 779, 748
+  orig: 779, 748
+  offset: 0, 0
+  index: -1
+mao_2
+  rotate: true
+  xy: 783, 96
+  size: 235, 360
+  orig: 235, 360
+  offset: 0, 0
+  index: -1
+mao_3
+  rotate: false
+  xy: 1100, 341
+  size: 144, 409
+  orig: 152, 413
+  offset: 7, 4
+  index: -1
+mao_4
+  rotate: true
+  xy: 1246, 607
+  size: 143, 407
+  orig: 152, 413
+  offset: 1, 6
+  index: -1
+mao_5
+  rotate: false
+  xy: 783, 333
+  size: 157, 417
+  orig: 157, 417
+  offset: 0, 0
+  index: -1
+mao_6
+  rotate: false
+  xy: 942, 333
+  size: 156, 417
+  orig: 157, 417
+  offset: 1, 0
+  index: -1
+mao_7
+  rotate: false
+  xy: 1298, 58
+  size: 215, 80
+  orig: 274, 447
+  offset: 10, 367
+  index: -1
+maoa_19
+  rotate: true
+  xy: 1246, 208
+  size: 397, 405
+  orig: 397, 405
+  offset: 0, 0
+  index: -1
+maoa_20
+  rotate: true
+  xy: 1408, 140
+  size: 66, 224
+  orig: 66, 224
+  offset: 0, 0
+  index: -1
+maoa_21
+  rotate: false
+  xy: 1145, 5
+  size: 103, 201
+  orig: 103, 201
+  offset: 0, 0
+  index: -1
+maoa_22
+  rotate: true
+  xy: 888, 4
+  size: 90, 100
+  orig: 90, 101
+  offset: 0, 1
+  index: -1
+maoa_23
+  rotate: false
+  xy: 990, 17
+  size: 109, 77
+  orig: 111, 79
+  offset: 1, 1
+  index: -1
+maoa_24
+  rotate: false
+  xy: 1250, 50
+  size: 46, 156
+  orig: 46, 156
+  offset: 0, 0
+  index: -1
+maoa_25
+  rotate: true
+  xy: 783, 3
+  size: 91, 103
+  orig: 91, 103
+  offset: 0, 0
+  index: -1
+maoa_26
+  rotate: true
+  xy: 1145, 229
+  size: 110, 76
+  orig: 112, 78
+  offset: 1, 1
+  index: -1
+maoa_27
+  rotate: true
+  xy: 1250, 2
+  size: 46, 156
+  orig: 46, 156
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,111 @@
+
+sisi.png
+size: 1533,670
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+mao_10
+  rotate: true
+  xy: 1051, 497
+  size: 171, 413
+  orig: 171, 413
+  offset: 0, 0
+  index: -1
+mao_11
+  rotate: true
+  xy: 1051, 332
+  size: 163, 412
+  orig: 163, 412
+  offset: 0, 0
+  index: -1
+mao_12
+  rotate: false
+  xy: 693, 13
+  size: 207, 75
+  orig: 220, 199
+  offset: 7, 124
+  index: -1
+mao_13
+  rotate: true
+  xy: 1039, 60
+  size: 134, 378
+  orig: 134, 386
+  offset: 0, 0
+  index: -1
+mao_14
+  rotate: true
+  xy: 1051, 196
+  size: 134, 379
+  orig: 134, 386
+  offset: 0, 0
+  index: -1
+mao_8
+  rotate: false
+  xy: 2, 15
+  size: 689, 653
+  orig: 689, 653
+  offset: 0, 0
+  index: -1
+mao_9
+  rotate: true
+  xy: 693, 90
+  size: 220, 344
+  orig: 220, 344
+  offset: 0, 0
+  index: -1
+maoa_1
+  rotate: false
+  xy: 693, 312
+  size: 356, 356
+  orig: 356, 356
+  offset: 0, 0
+  index: -1
+maoa_13
+  rotate: false
+  xy: 1176, 2
+  size: 85, 56
+  orig: 87, 58
+  offset: 1, 1
+  index: -1
+maoa_16
+  rotate: false
+  xy: 1263, 2
+  size: 84, 56
+  orig: 86, 58
+  offset: 1, 1
+  index: -1
+maoa_2
+  rotate: false
+  xy: 1466, 463
+  size: 65, 205
+  orig: 67, 205
+  offset: 2, 0
+  index: -1
+maoa_3
+  rotate: false
+  xy: 1419, 3
+  size: 103, 191
+  orig: 103, 191
+  offset: 0, 0
+  index: -1
+maoa_4
+  rotate: false
+  xy: 902, 11
+  size: 87, 77
+  orig: 87, 77
+  offset: 0, 0
+  index: -1
+maoa_6
+  rotate: false
+  xy: 1465, 284
+  size: 62, 177
+  orig: 62, 177
+  offset: 0, 0
+  index: -1
+maoa_8
+  rotate: true
+  xy: 991, 3
+  size: 55, 183
+  orig: 55, 183
+  offset: 0, 0
+  index: -1

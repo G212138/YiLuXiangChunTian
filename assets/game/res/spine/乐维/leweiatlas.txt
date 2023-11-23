@@ -1,0 +1,125 @@
+
+lewei.png
+size: 1761,664
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+mao_15
+  rotate: true
+  xy: 2, 2
+  size: 660, 749
+  orig: 660, 749
+  offset: 0, 0
+  index: -1
+mao_16
+  rotate: true
+  xy: 753, 20
+  size: 234, 392
+  orig: 242, 452
+  offset: 0, 60
+  index: -1
+mao_17
+  rotate: true
+  xy: 1109, 505
+  size: 157, 483
+  orig: 157, 483
+  offset: 0, 0
+  index: -1
+mao_18
+  rotate: true
+  xy: 1109, 351
+  size: 152, 484
+  orig: 152, 484
+  offset: 0, 0
+  index: -1
+mao_19
+  rotate: true
+  xy: 1580, 124
+  size: 225, 74
+  orig: 227, 105
+  offset: 0, 30
+  index: -1
+mao_20
+  rotate: true
+  xy: 1147, 20
+  size: 160, 430
+  orig: 160, 430
+  offset: 0, 0
+  index: -1
+mao_21
+  rotate: true
+  xy: 1147, 182
+  size: 167, 431
+  orig: 167, 431
+  offset: 0, 0
+  index: -1
+maoa_10
+  rotate: false
+  xy: 1697, 388
+  size: 62, 201
+  orig: 62, 201
+  offset: 0, 0
+  index: -1
+maoa_11
+  rotate: false
+  xy: 1595, 402
+  size: 100, 187
+  orig: 101, 188
+  offset: 1, 1
+  index: -1
+maoa_12
+  rotate: false
+  xy: 1656, 161
+  size: 56, 111
+  orig: 58, 113
+  offset: 1, 1
+  index: -1
+maoa_14
+  rotate: true
+  xy: 1594, 627
+  size: 35, 161
+  orig: 43, 168
+  offset: 5, 0
+  index: -1
+maoa_15
+  rotate: true
+  xy: 1579, 31
+  size: 91, 76
+  orig: 91, 76
+  offset: 0, 0
+  index: -1
+maoa_17
+  rotate: false
+  xy: 1656, 274
+  size: 57, 112
+  orig: 59, 114
+  offset: 1, 1
+  index: -1
+maoa_18
+  rotate: true
+  xy: 1594, 591
+  size: 34, 145
+  orig: 34, 145
+  offset: 0, 0
+  index: -1
+maoa_5
+  rotate: true
+  xy: 1657, 72
+  size: 87, 60
+  orig: 89, 62
+  offset: 1, 1
+  index: -1
+maoa_7
+  rotate: false
+  xy: 1657, 11
+  size: 87, 59
+  orig: 89, 61
+  offset: 1, 1
+  index: -1
+maoa_9
+  rotate: false
+  xy: 753, 256
+  size: 354, 406
+  orig: 354, 406
+  offset: 0, 0
+  index: -1

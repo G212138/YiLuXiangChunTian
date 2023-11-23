@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "提交键",
+    "texture": "dfa8e614-4762-4b8c-ad2f-e094826847b7",
+    "atlas": "",
+    "rect": [
+      0,
+      5,
+      336,
+      112
+    ],
+    "offset": [
+      -2,
+      3.5
+    ],
+    "originalSize": [
+      340,
+      129
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

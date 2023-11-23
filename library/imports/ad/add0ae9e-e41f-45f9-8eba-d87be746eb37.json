@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "帽子框",
+    "texture": "c8c1b35b-6957-4da5-b8e5-5f13ac8073a9",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1046,
+      150
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1046,
+      150
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

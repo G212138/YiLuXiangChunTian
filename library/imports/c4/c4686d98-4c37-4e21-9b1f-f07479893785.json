@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "lewei",
+    "texture": "d1a26634-9f4e-4467-8e4f-e25cab8e29c4",
+    "atlas": "",
+    "rect": [
+      3,
+      3,
+      1755,
+      659
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      1761,
+      664
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
