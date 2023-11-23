@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "pipi_qiche",
+    "texture": "7022bcdc-262d-42f8-9537-e2d966c3ff6c",
+    "atlas": "",
+    "rect": [
+      2,
+      7,
+      879,
+      874
+    ],
+    "offset": [
+      0,
+      -2.5
+    ],
+    "originalSize": [
+      883,
+      883
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

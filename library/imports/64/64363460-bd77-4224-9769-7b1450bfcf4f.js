@@ -26,11 +26,7 @@ var EditorData = /** @class */ (function () {
         // 课件等级 0：幼小  1：小低  2：小高
         this.coursewareLevel = 2;
         // TODO 自定义数据
-        this.tigan = '';
-        this.isPaidui = true;
-        this.maoziArr = [null, null, null, null];
-        this.jueseArr = [null, null, null, null];
-        this.jueseFayanArr = ["", "", "", ""];
+        this.gameIndex = 0;
     }
     return EditorData;
 }());

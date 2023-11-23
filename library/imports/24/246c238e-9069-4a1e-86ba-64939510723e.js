@@ -98,7 +98,6 @@ var GamePanel = /** @class */ (function (_super) {
     GamePanel.prototype.onReplay = function () {
         _super.prototype.onReplay.call(this);
         SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.curLevel = 0;
-        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.answer = [null, null, null, null];
         ListenerManager_1.ListenerManager.dispatch(EventType_1.EventType.GAME_REPLAY);
     };
     GamePanel.prototype.update = function (dt) {

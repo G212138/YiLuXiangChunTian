@@ -113,35 +113,35 @@ var DragSync = /** @class */ (function (_super) {
     DragSync.prototype.touchStartHandler = function (data) {
         if (!this.isEnable)
             return;
-        this.touchStartPos = cc.v2(data.pos.x, data.pos.y);
-        this.isClickEvent = true;
-        this.touchStartData = data;
+        // this.touchStartPos = cc.v2(data.pos.x, data.pos.y);
+        // this.isClickEvent = true;
+        // this.touchStartData = data;
+        this.handleTouchStart(data);
     };
     DragSync.prototype.handleTouchStart = function (data) {
         this.node.parent = this.rootNode;
-        this.node.position = cc.v3(this.touchStartData.pos.x, this.touchStartData.pos.y);
+        this.node.position = cc.v3(data.pos.x, data.pos.y);
         for (var _i = 0, _a = this.touchStartEvents; _i < _a.length; _i++) {
             var eventHandler = _a[_i];
-            eventHandler.emit([{ pos: this.touchStartData.pos, target: this.node }]);
+            eventHandler.emit([{ pos: data.pos, target: this.node }]);
         }
     };
     DragSync.prototype.touchMoveHandler = function (data) {
         //判断当前位置与触摸开始位置的距离，如果超过一定距离，则不再判断为点击事件
-        if (this.isClickEvent && this.touchStartPos) {
-            var distance = this.touchStartPos.sub(cc.v2(data.pos.x, data.pos.y)).mag();
-            if (distance > 10) {
-                this.isClickEvent = false;
-                this.handleTouchStart(this.touchStartData);
-                this.touchStartData = null;
-            }
+        // if (this.isClickEvent && this.touchStartPos) {
+        //     let distance = this.touchStartPos.sub(cc.v2(data.pos.x, data.pos.y)).mag();
+        //     if (distance > 10) {
+        //         this.isClickEvent = false;
+        //         this.handleTouchStart(this.touchStartData);
+        //         this.touchStartData = null;
+        //     }
+        // } else {
+        this.node.position = cc.v3(data.pos.x, data.pos.y);
+        for (var _i = 0, _a = this.touchMovingEvents; _i < _a.length; _i++) {
+            var eventHandler = _a[_i];
+            eventHandler.emit([{ pos: data.pos, target: this.node }]);
         }
-        else {
-            this.node.position = cc.v3(data.pos.x, data.pos.y);
-            for (var _i = 0, _a = this.touchMovingEvents; _i < _a.length; _i++) {
-                var eventHandler = _a[_i];
-                eventHandler.emit([{ pos: data.pos, target: this.node }]);
-            }
-        }
+        // }
     };
     DragSync.prototype.touchEndHandler = function (data) {
         if (this.isClickEvent && this.touchStartPos) {

@@ -13,7 +13,6 @@ var CustomSyncData = /** @class */ (function () {
     function CustomSyncData() {
         this.curLevel = 0; // 当前关卡(第一关为0)
         // TODO 自定义
-        this.answer = [null, null, null, null];
     }
     return CustomSyncData;
 }());

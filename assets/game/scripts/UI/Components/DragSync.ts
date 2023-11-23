@@ -100,34 +100,35 @@ export default class DragSync extends cc.Component {
 
     private touchStartHandler(data) {
         if (!this.isEnable) return;
-        this.touchStartPos = cc.v2(data.pos.x, data.pos.y);
-        this.isClickEvent = true;
-        this.touchStartData = data;
+        // this.touchStartPos = cc.v2(data.pos.x, data.pos.y);
+        // this.isClickEvent = true;
+        // this.touchStartData = data;
+        this.handleTouchStart(data);
     }
 
     private handleTouchStart(data) {
         this.node.parent = this.rootNode;
-        this.node.position = cc.v3(this.touchStartData.pos.x, this.touchStartData.pos.y);
+        this.node.position = cc.v3(data.pos.x, data.pos.y);
         for (let eventHandler of this.touchStartEvents) {
-            eventHandler.emit([{ pos: this.touchStartData.pos, target: this.node }]);
+            eventHandler.emit([{ pos: data.pos, target: this.node }]);
         }
     }
 
     private touchMoveHandler(data) {
         //判断当前位置与触摸开始位置的距离，如果超过一定距离，则不再判断为点击事件
-        if (this.isClickEvent && this.touchStartPos) {
-            let distance = this.touchStartPos.sub(cc.v2(data.pos.x, data.pos.y)).mag();
-            if (distance > 10) {
-                this.isClickEvent = false;
-                this.handleTouchStart(this.touchStartData);
-                this.touchStartData = null;
-            }
-        } else {
+        // if (this.isClickEvent && this.touchStartPos) {
+        //     let distance = this.touchStartPos.sub(cc.v2(data.pos.x, data.pos.y)).mag();
+        //     if (distance > 10) {
+        //         this.isClickEvent = false;
+        //         this.handleTouchStart(this.touchStartData);
+        //         this.touchStartData = null;
+        //     }
+        // } else {
             this.node.position = cc.v3(data.pos.x, data.pos.y);
             for (let eventHandler of this.touchMovingEvents) {
                 eventHandler.emit([{ pos: data.pos, target: this.node }]);
             }
-        }
+        // }
     }
 
     private touchEndHandler(data) {

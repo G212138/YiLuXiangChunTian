@@ -1,0 +1,244 @@
+
+pipi_qiche.png
+size: 883,883
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 841, 284
+  size: 70, 40
+  orig: 72, 42
+  offset: 1, 1
+  index: -1
+10
+  rotate: true
+  xy: 2, 78
+  size: 135, 146
+  orig: 137, 148
+  offset: 1, 1
+  index: -1
+11
+  rotate: false
+  xy: 2, 215
+  size: 421, 364
+  orig: 421, 364
+  offset: 0, 0
+  index: -1
+12
+  rotate: false
+  xy: 615, 520
+  size: 143, 172
+  orig: 145, 174
+  offset: 1, 1
+  index: -1
+13
+  rotate: false
+  xy: 701, 163
+  size: 138, 191
+  orig: 138, 191
+  offset: 0, 0
+  index: -1
+14
+  rotate: false
+  xy: 532, 446
+  size: 79, 133
+  orig: 79, 133
+  offset: 0, 0
+  index: -1
+15
+  rotate: true
+  xy: 841, 163
+  size: 56, 27
+  orig: 58, 29
+  offset: 1, 1
+  index: -1
+17
+  rotate: false
+  xy: 232, 30
+  size: 45, 50
+  orig: 47, 52
+  offset: 1, 1
+  index: -1
+18
+  rotate: false
+  xy: 150, 82
+  size: 132, 131
+  orig: 132, 131
+  offset: 0, 0
+  index: -1
+19
+  rotate: true
+  xy: 841, 221
+  size: 61, 40
+  orig: 63, 42
+  offset: 1, 1
+  index: -1
+2
+  rotate: false
+  xy: 693, 378
+  size: 62, 140
+  orig: 62, 140
+  offset: 0, 0
+  index: -1
+20
+  rotate: true
+  xy: 2, 6
+  size: 70, 138
+  orig: 70, 138
+  offset: 0, 0
+  index: -1
+21
+  rotate: true
+  xy: 788, 697
+  size: 184, 93
+  orig: 184, 93
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 615, 694
+  size: 171, 187
+  orig: 173, 189
+  offset: 1, 1
+  index: -1
+4
+  rotate: false
+  xy: 693, 357
+  size: 31, 19
+  orig: 33, 21
+  offset: 1, 1
+  index: -1
+5
+  rotate: false
+  xy: 757, 356
+  size: 59, 79
+  orig: 61, 81
+  offset: 1, 1
+  index: -1
+5-2
+  rotate: true
+  xy: 464, 19
+  size: 59, 79
+  orig: 61, 81
+  offset: 1, 1
+  index: -1
+6
+  rotate: false
+  xy: 532, 364
+  size: 76, 80
+  orig: 78, 82
+  offset: 1, 1
+  index: -1
+6-2
+  rotate: true
+  xy: 150, 8
+  size: 72, 80
+  orig: 78, 82
+  offset: 5, 1
+  index: -1
+7
+  rotate: true
+  xy: 425, 373
+  size: 206, 105
+  orig: 208, 107
+  offset: 1, 1
+  index: -1
+8
+  rotate: true
+  xy: 757, 437
+  size: 67, 63
+  orig: 69, 65
+  offset: 1, 1
+  index: -1
+9
+  rotate: true
+  xy: 613, 362
+  size: 156, 30
+  orig: 158, 32
+  offset: 1, 1
+  index: -1
+biyan
+  rotate: true
+  xy: 760, 506
+  size: 186, 61
+  orig: 188, 64
+  offset: 1, 1
+  index: -1
+meimao
+  rotate: true
+  xy: 385, 113
+  size: 100, 38
+  orig: 102, 40
+  offset: 1, 1
+  index: -1
+qiche_1
+  rotate: false
+  xy: 2, 581
+  size: 611, 300
+  orig: 648, 348
+  offset: 18, 24
+  index: -1
+qiche_2
+  rotate: false
+  xy: 425, 80
+  size: 274, 274
+  orig: 320, 316
+  offset: 20, 24
+  index: -1
+qiche_3
+  rotate: true
+  xy: 823, 356
+  size: 155, 46
+  orig: 169, 56
+  offset: 8, 5
+  index: -1
+qiche_4
+  rotate: true
+  xy: 645, 363
+  size: 155, 46
+  orig: 169, 56
+  offset: 8, 5
+  index: -1
+shou1
+  rotate: false
+  xy: 385, 10
+  size: 77, 68
+  orig: 79, 70
+  offset: 1, 1
+  index: -1
+shou2
+  rotate: false
+  xy: 279, 9
+  size: 77, 67
+  orig: 79, 69
+  offset: 1, 1
+  index: -1
+yanjing
+  rotate: true
+  xy: 823, 513
+  size: 182, 42
+  orig: 184, 44
+  offset: 1, 1
+  index: -1
+zui
+  rotate: true
+  xy: 385, 87
+  size: 24, 25
+  orig: 26, 27
+  offset: 1, 1
+  index: -1
+zui2
+  rotate: true
+  xy: 284, 78
+  size: 135, 99
+  orig: 137, 101
+  offset: 1, 1
+  index: -1
+zui3
+  rotate: false
+  xy: 701, 43
+  size: 163, 118
+  orig: 165, 120
+  offset: 1, 1
+  index: -1

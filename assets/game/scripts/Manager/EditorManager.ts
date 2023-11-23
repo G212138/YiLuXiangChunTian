@@ -20,11 +20,7 @@ class EditorData {
     public coursewareLevel: number = 2;
 
     // TODO 自定义数据
-    public tigan: string = '';
-    public isPaidui: boolean = true;
-    public maoziArr: number[] = [null, null, null, null];
-    public jueseArr: number[] = [null, null, null, null];
-    public jueseFayanArr: string[] = ["", "", "", ""];
+    public gameIndex: number = 0;
 }
 
 class EditorManagerClass {

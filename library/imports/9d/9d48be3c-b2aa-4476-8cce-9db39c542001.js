@@ -17,12 +17,6 @@ var EventType;
     EventType["GAME_OVER"] = "GAME_OVER";
     EventType["SUBMIT"] = "SUBMIT";
     EventType["GAME_REPLAY"] = "GAME_REPLAY";
-    EventType["DRAG_HEAD"] = "DRAG_HEAD";
-    EventType["DRAG_MAOZI"] = "DRAG_MAOZI";
-    EventType["DRAG_HEAD_END"] = "DRAG_HEAD_END";
-    EventType["DRAG_MAOZI_END"] = "DRAG_MAOZI_END";
-    EventType["GAME_MAOZI_DRAG"] = "GAME_MAOZI_DRAG";
-    EventType["GAME_MAOZI_DRAG_END"] = "GAME_MAOZI_DRAG_END";
 })(EventType = exports.EventType || (exports.EventType = {}));
 
 cc._RF.pop();
