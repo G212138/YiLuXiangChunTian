@@ -40,15 +40,15 @@ export default class GameUI extends cc.Component {
     }
 
     private initUI() {
-        this.gameIndex = EditorManager.editorData.gameIndex;
-        if (this.gameIndex === 0) {
-            this.game_1.active = true;
-            this.game_2.active = false;
+        // this.gameIndex = EditorManager.editorData.gameIndex;
+        // if (this.gameIndex === 0) {
+        //     this.game_1.active = true;
+        //     this.game_2.active = false;
             this.game_1.getComponent(Game_1).initGame();
-        } else {
-            this.game_1.active = false;
-            this.game_2.active = true;
-            this.game_2.getComponent(Game_2).initGame();
-        }
+        // } else {
+        //     this.game_1.active = false;
+        //     this.game_2.active = true;
+        //     this.game_2.getComponent(Game_2).initGame();
+        // }
     }
 }

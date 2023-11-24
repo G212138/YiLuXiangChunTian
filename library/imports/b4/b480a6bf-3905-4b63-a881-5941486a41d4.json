@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "hongsegaoliang",
+    "texture": "25fcd30e-a1d7-4a12-9091-f77c590be148",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      418,
+      306
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      418,
+      306
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

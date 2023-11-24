@@ -45,19 +45,22 @@ var Game_1 = /** @class */ (function (_super) {
             ditu_panel.children[i].getChildByName("highLight").active = false;
             ditu_panel.children[i].getChildByName("game_node").active = false;
             ditu_panel.children[i].getChildByName("touch_mask").active = false;
+            ditu_panel.children[i].getChildByName("luxian").active = false;
         }
         //所有子节点逐个出现
         for (var i = 0; i < ditu_panel.childrenCount; i++) {
             var node = ditu_panel.children[i];
-            cc.tween(node).delay(i * 0.2).to(0.3, { scale: 1 }, { easing: 'backOut' }).start();
+            cc.tween(node).delay(i * 0.2).to(0.3, { scale: 0.45 }, { easing: 'backOut' }).start();
         }
         this.scheduleOnce(function () {
             for (var i = 0; i < ditu_panel.childrenCount; i++) {
                 var node = ditu_panel.children[i];
-                node.getChildByName("highLight").color = cc.Color.WHITE;
-                node.getChildByName("highLight").active = true;
+                ditu_panel.children[i].getChildByName("luxian").active = true;
+                ditu_panel.children[i].getChildByName("luxian").opacity = 0;
+                cc.tween(node.getChildByName("luxian")).delay(i * 0.2).to(0.3, { opacity: 255 }).call(function () {
+                    UIHelp_1.UIHelp.closeMask();
+                }).start();
             }
-            UIHelp_1.UIHelp.closeMask();
         }, 0.2 * ditu_panel.childrenCount);
     };
     Game_1.prototype.onClickMap = function (data) {
@@ -66,21 +69,20 @@ var Game_1 = /** @class */ (function (_super) {
         var paizi_1 = this.node.getChildByName('paizi_1');
         var paizi_2 = this.node.getChildByName('paizi_2');
         data.target.getChildByName("highLight").active = true;
-        data.target.getChildByName("highLight").color = cc.Color.RED;
         var ditu_panel = this.node.getChildByName('ditu_panel');
         var right_panel = this.node.getChildByName('right_panel');
         for (var i = 0; i < ditu_panel.childrenCount; i++) {
             ditu_panel.children[i].getComponent(Game_1_Type_1.default).setIsCurrent(false);
+            ditu_panel.children[i].getChildByName("touch_mask").active = false;
+            ditu_panel.children[i].getChildByName("game_node").active = false;
         }
         data.target.getComponent(Game_1_Type_1.default).setIsCurrent(true);
         var curIndex = data.target.getComponent(Game_1_Type_1.default).getIndex();
         if (paizi_2.opacity == 0) {
             this.scheduleOnce(function () {
-                cc.tween(paizi_1).to(0.25, { opacity: 0 }).call(function () {
-                    cc.tween(paizi_2).to(0.25, { opacity: 255 }).start();
-                }).start();
-                cc.tween(data.target).to(0.5, { position: cc.v3(0, 35) }).to(0.5, { scale: 2.6 }).call(function () {
-                    // data.target.getChildByName("highLight").color = cc.Color.WHITE;
+                paizi_1.opacity = 0;
+                paizi_2.opacity = 255;
+                cc.tween(data.target).to(0.5, { position: cc.v3(0, -145) }).to(0.5, { scale: 1 }).call(function () {
                     data.target.getChildByName("touch_mask").active = true;
                     data.target.getChildByName("game_node").active = true;
                     UIHelp_1.UIHelp.closeMask();
@@ -100,15 +102,14 @@ var Game_1 = /** @class */ (function (_super) {
                         if (!isCurrent) {
                             var index = ditu_panel.children[i].getComponent(Game_1_Type_1.default).getIndex();
                             var pos = right_panel.children[index].position;
-                            cc.tween(ditu_panel.children[i]).to(0.5, { scale: 0.5, position: pos }).start();
+                            cc.tween(ditu_panel.children[i]).to(0.5, { scale: 0.25, position: pos }).start();
                         }
                     }
                 }, 0);
             }, 1);
         }
         else {
-            cc.tween(data.target).to(0.5, { position: cc.v3(0, 35) }).to(0.5, { scale: 2.6 }).call(function () {
-                // data.target.getChildByName("highLight").color = cc.Color.WHITE;
+            cc.tween(data.target).to(0.5, { position: cc.v3(0, -145) }).to(0.5, { scale: 1 }).call(function () {
                 data.target.getChildByName("touch_mask").active = true;
                 data.target.getChildByName("game_node").active = true;
                 UIHelp_1.UIHelp.closeMask();
@@ -128,7 +129,7 @@ var Game_1 = /** @class */ (function (_super) {
                     if (!isCurrent) {
                         var index = ditu_panel.children[i].getComponent(Game_1_Type_1.default).getIndex();
                         var pos = right_panel.children[index].position;
-                        cc.tween(ditu_panel.children[i]).to(0.5, { scale: 0.5, position: pos }).start();
+                        cc.tween(ditu_panel.children[i]).to(0.5, { scale: 0.25, position: pos }).start();
                     }
                 }
             }, 0);

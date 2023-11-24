@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "1luxian",
+    "texture": "f2334fcd-c805-4022-9d2e-ef9d271ddbb6",
+    "atlas": "",
+    "rect": [
+      133,
+      100,
+      499,
+      399
+    ],
+    "offset": [
+      -55,
+      18
+    ],
+    "originalSize": [
+      875,
+      635
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

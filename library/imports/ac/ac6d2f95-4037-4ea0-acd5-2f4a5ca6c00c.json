@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "banzi",
+    "texture": "b3d94796-9166-43dc-a920-a862a9756491",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1620,
+      964
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1620,
+      964
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

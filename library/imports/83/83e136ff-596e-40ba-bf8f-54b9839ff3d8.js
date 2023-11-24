@@ -26,9 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ListenerManager_1 = require("../../../../frame/scripts/Manager/ListenerManager");
 var UIHelp_1 = require("../../../../frame/scripts/Utils/UIHelp");
 var EventType_1 = require("../../Data/EventType");
-var EditorManager_1 = require("../../Manager/EditorManager");
 var Game_1_1 = require("./Game_1");
-var Game_2_1 = require("./Game_2");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var GameUI = /** @class */ (function (_super) {
     __extends(GameUI, _super);
@@ -58,17 +56,16 @@ var GameUI = /** @class */ (function (_super) {
         this.unscheduleAllCallbacks();
     };
     GameUI.prototype.initUI = function () {
-        this.gameIndex = EditorManager_1.EditorManager.editorData.gameIndex;
-        if (this.gameIndex === 0) {
-            this.game_1.active = true;
-            this.game_2.active = false;
-            this.game_1.getComponent(Game_1_1.default).initGame();
-        }
-        else {
-            this.game_1.active = false;
-            this.game_2.active = true;
-            this.game_2.getComponent(Game_2_1.default).initGame();
-        }
+        // this.gameIndex = EditorManager.editorData.gameIndex;
+        // if (this.gameIndex === 0) {
+        //     this.game_1.active = true;
+        //     this.game_2.active = false;
+        this.game_1.getComponent(Game_1_1.default).initGame();
+        // } else {
+        //     this.game_1.active = false;
+        //     this.game_2.active = true;
+        //     this.game_2.getComponent(Game_2).initGame();
+        // }
     };
     __decorate([
         property(cc.Node)
