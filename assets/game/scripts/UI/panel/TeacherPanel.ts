@@ -37,7 +37,7 @@ export default class TeacherPanel extends BaseTeacherPanel {
         if (this._btn_save) {
             this._btn_save.active = !isEdit;
         }
-        // this._btn_save.active = true;
+        this._btn_save.active = true;
     }
 
     /**
@@ -77,12 +77,12 @@ export default class TeacherPanel extends BaseTeacherPanel {
 
     // 保存课件按钮
     public onBtnSaveClicked() {
-        const isEdit = EditorManager.isSupportEdit();
-        if (!isEdit || ReportManager.isAllOver) {
+        // const isEdit = EditorManager.isSupportEdit();
+        // if (!isEdit || ReportManager.isAllOver) {
             UIHelp.showSubmissionPanel();
-        } else {
-            UIHelp.showTip('请先完成一遍题目');
-        }
+        // } else {
+        //     UIHelp.showTip('请先完成一遍题目');
+        // }
     }
     // 预览课件按钮
     public onBtnViewClicked() {

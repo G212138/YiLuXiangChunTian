@@ -23,6 +23,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var UIHelp_1 = require("../../../../frame/scripts/Utils/UIHelp");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var Game_2 = /** @class */ (function (_super) {
     __extends(Game_2, _super);
@@ -30,6 +31,9 @@ var Game_2 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Game_2.prototype.initGame = function () {
+        UIHelp_1.UIHelp.closeMask();
+    };
+    Game_2.prototype.reconnect = function () {
     };
     Game_2 = __decorate([
         ccclass

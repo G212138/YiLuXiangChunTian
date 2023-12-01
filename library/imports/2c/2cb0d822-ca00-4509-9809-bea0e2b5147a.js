@@ -23,6 +23,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var SyncDataManager_1 = require("../../../../frame/scripts/Manager/SyncDataManager");
 var UIHelp_1 = require("../../../../frame/scripts/Utils/UIHelp");
 var Game_1_Type_1 = require("./Game_1_Type");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
@@ -36,6 +37,78 @@ var Game_1 = /** @class */ (function (_super) {
         this.node.getChildByName('paizi_2').opacity = 0;
         this.node.getChildByName('right_panel').active = false;
         this.initEffect();
+    };
+    Game_1.prototype.reconnect = function () {
+        var _this = this;
+        var curIndex = SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.levelTypeIndex;
+        var ditu_panel = this.node.getChildByName('ditu_panel');
+        var right_panel = this.node.getChildByName('right_panel');
+        var target = ditu_panel.children[curIndex];
+        var paizi_1 = this.node.getChildByName('paizi_1');
+        var paizi_2 = this.node.getChildByName('paizi_2');
+        target.getChildByName("highLight").active = true;
+        for (var i = 0; i < ditu_panel.childrenCount; i++) {
+            ditu_panel.children[i].getComponent(Game_1_Type_1.default).setIsCurrent(false);
+            ditu_panel.children[i].getChildByName("touch_mask").active = false;
+            ditu_panel.children[i].getChildByName("game_node").active = false;
+        }
+        target.getComponent(Game_1_Type_1.default).setIsCurrent(true);
+        if (paizi_2.opacity == 0) {
+            this.scheduleOnce(function () {
+                paizi_1.opacity = 0;
+                paizi_2.opacity = 255;
+                cc.tween(target).to(0.5, { position: cc.v3(0, 0) }).to(0.5, { scale: 1 }).call(function () {
+                    target.getChildByName("touch_mask").active = true;
+                    target.getChildByName("game_node").active = true;
+                    UIHelp_1.UIHelp.closeMask();
+                }).start();
+                right_panel.active = true;
+                for (var i = 0; i < right_panel.childrenCount; i++) {
+                    right_panel.children[i].active = false;
+                }
+                for (var i = 0; i < right_panel.childrenCount; i++) {
+                    if (i != curIndex) {
+                        right_panel.children[i].active = true;
+                    }
+                }
+                _this.scheduleOnce(function () {
+                    for (var i = 0; i < ditu_panel.childrenCount; i++) {
+                        var isCurrent = ditu_panel.children[i].getComponent(Game_1_Type_1.default).getIsCurrent();
+                        if (!isCurrent) {
+                            var index = ditu_panel.children[i].getComponent(Game_1_Type_1.default).getIndex();
+                            var pos = right_panel.children[index].position;
+                            cc.tween(ditu_panel.children[i]).to(0.5, { scale: 0.25, position: pos }).start();
+                        }
+                    }
+                }, 0);
+            }, 1);
+        }
+        else {
+            cc.tween(target).to(0.5, { position: cc.v3(0, 0) }).to(0.5, { scale: 1 }).call(function () {
+                target.getChildByName("touch_mask").active = true;
+                target.getChildByName("game_node").active = true;
+                UIHelp_1.UIHelp.closeMask();
+            }).start();
+            right_panel.active = true;
+            for (var i = 0; i < right_panel.childrenCount; i++) {
+                right_panel.children[i].active = false;
+            }
+            for (var i = 0; i < right_panel.childrenCount; i++) {
+                if (i != curIndex) {
+                    right_panel.children[i].active = true;
+                }
+            }
+            this.scheduleOnce(function () {
+                for (var i = 0; i < ditu_panel.childrenCount; i++) {
+                    var isCurrent = ditu_panel.children[i].getComponent(Game_1_Type_1.default).getIsCurrent();
+                    if (!isCurrent) {
+                        var index = ditu_panel.children[i].getComponent(Game_1_Type_1.default).getIndex();
+                        var pos = right_panel.children[index].position;
+                        cc.tween(ditu_panel.children[i]).to(0.5, { scale: 0.25, position: pos }).start();
+                    }
+                }
+            }, 0);
+        }
     };
     Game_1.prototype.initEffect = function () {
         var ditu_panel = this.node.getChildByName('ditu_panel');
@@ -65,6 +138,9 @@ var Game_1 = /** @class */ (function (_super) {
     };
     Game_1.prototype.onClickMap = function (data) {
         var _this = this;
+        if (data.target.getComponent(Game_1_Type_1.default).getIsCurrent()) {
+            return;
+        }
         UIHelp_1.UIHelp.showMask();
         var paizi_1 = this.node.getChildByName('paizi_1');
         var paizi_2 = this.node.getChildByName('paizi_2');
@@ -78,11 +154,12 @@ var Game_1 = /** @class */ (function (_super) {
         }
         data.target.getComponent(Game_1_Type_1.default).setIsCurrent(true);
         var curIndex = data.target.getComponent(Game_1_Type_1.default).getIndex();
+        SyncDataManager_1.SyncDataManager.getSyncData().customSyncData.levelTypeIndex = curIndex;
         if (paizi_2.opacity == 0) {
             this.scheduleOnce(function () {
                 paizi_1.opacity = 0;
                 paizi_2.opacity = 255;
-                cc.tween(data.target).to(0.5, { position: cc.v3(0, -145) }).to(0.5, { scale: 1 }).call(function () {
+                cc.tween(data.target).to(0.5, { position: cc.v3(0, 0) }).to(0.5, { scale: 1 }).call(function () {
                     data.target.getChildByName("touch_mask").active = true;
                     data.target.getChildByName("game_node").active = true;
                     UIHelp_1.UIHelp.closeMask();
@@ -109,7 +186,7 @@ var Game_1 = /** @class */ (function (_super) {
             }, 1);
         }
         else {
-            cc.tween(data.target).to(0.5, { position: cc.v3(0, -145) }).to(0.5, { scale: 1 }).call(function () {
+            cc.tween(data.target).to(0.5, { position: cc.v3(0, 0) }).to(0.5, { scale: 1 }).call(function () {
                 data.target.getChildByName("touch_mask").active = true;
                 data.target.getChildByName("game_node").active = true;
                 UIHelp_1.UIHelp.closeMask();

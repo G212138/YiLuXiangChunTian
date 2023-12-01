@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_shi_2",
+    "texture": "00285255-00b8-4c9b-aebd-06af9b89519b",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      150,
+      152
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      150,
+      152
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

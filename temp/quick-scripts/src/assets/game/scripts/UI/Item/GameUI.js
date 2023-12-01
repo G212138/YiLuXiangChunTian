@@ -26,7 +26,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ListenerManager_1 = require("../../../../frame/scripts/Manager/ListenerManager");
 var UIHelp_1 = require("../../../../frame/scripts/Utils/UIHelp");
 var EventType_1 = require("../../Data/EventType");
+var EditorManager_1 = require("../../Manager/EditorManager");
+var Gaem_3_1 = require("./Gaem_3");
 var Game_1_1 = require("./Game_1");
+var Game_2_1 = require("./Game_2");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var GameUI = /** @class */ (function (_super) {
     __extends(GameUI, _super);
@@ -34,17 +37,18 @@ var GameUI = /** @class */ (function (_super) {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.game_1 = null;
         _this.game_2 = null;
+        _this.game_3 = null;
         _this.gameIndex = 0;
         return _this;
     }
     GameUI.prototype.onLoad = function () {
         ListenerManager_1.ListenerManager.on(EventType_1.EventType.ENTER_GAME, this.handleEnterGame, this);
-        ListenerManager_1.ListenerManager.on(EventType_1.EventType.GAME_RECONNECT, this.resetUI, this);
+        ListenerManager_1.ListenerManager.on(EventType_1.EventType.GAME_RECONNECT, this.handleReConnect, this);
         ListenerManager_1.ListenerManager.on(EventType_1.EventType.GAME_REPLAY, this.handleEnterGame, this);
     };
     GameUI.prototype.onDestroy = function () {
         ListenerManager_1.ListenerManager.off(EventType_1.EventType.ENTER_GAME, this.handleEnterGame, this);
-        ListenerManager_1.ListenerManager.off(EventType_1.EventType.GAME_RECONNECT, this.resetUI, this);
+        ListenerManager_1.ListenerManager.off(EventType_1.EventType.GAME_RECONNECT, this.handleReConnect, this);
         ListenerManager_1.ListenerManager.off(EventType_1.EventType.GAME_REPLAY, this.handleEnterGame, this);
     };
     GameUI.prototype.handleEnterGame = function () {
@@ -55,17 +59,47 @@ var GameUI = /** @class */ (function (_super) {
         this.initUI();
         this.unscheduleAllCallbacks();
     };
+    GameUI.prototype.handleReConnect = function () {
+        this.gameIndex = EditorManager_1.EditorManager.editorData.gameIndex;
+        if (this.gameIndex === 0) {
+            this.game_1.active = true;
+            this.game_2.active = false;
+            this.game_3.active = false;
+            this.game_1.getComponent(Game_1_1.default).reconnect();
+        }
+        else if (this.gameIndex === 1) {
+            this.game_1.active = false;
+            this.game_2.active = true;
+            this.game_3.active = false;
+            this.game_2.getComponent(Game_2_1.default).reconnect();
+        }
+        else {
+            this.game_1.active = false;
+            this.game_2.active = false;
+            this.game_3.active = true;
+            this.game_3.getComponent(Gaem_3_1.default).reconnect();
+        }
+    };
     GameUI.prototype.initUI = function () {
-        // this.gameIndex = EditorManager.editorData.gameIndex;
-        // if (this.gameIndex === 0) {
-        //     this.game_1.active = true;
-        //     this.game_2.active = false;
-        this.game_1.getComponent(Game_1_1.default).initGame();
-        // } else {
-        //     this.game_1.active = false;
-        //     this.game_2.active = true;
-        //     this.game_2.getComponent(Game_2).initGame();
-        // }
+        this.gameIndex = EditorManager_1.EditorManager.editorData.gameIndex;
+        if (this.gameIndex === 0) {
+            this.game_1.active = true;
+            this.game_2.active = false;
+            this.game_3.active = false;
+            this.game_1.getComponent(Game_1_1.default).initGame();
+        }
+        else if (this.gameIndex === 1) {
+            this.game_1.active = false;
+            this.game_2.active = true;
+            this.game_3.active = false;
+            this.game_2.getComponent(Game_2_1.default).initGame();
+        }
+        else {
+            this.game_1.active = false;
+            this.game_2.active = false;
+            this.game_3.active = true;
+            this.game_3.getComponent(Gaem_3_1.default).initGame();
+        }
     };
     __decorate([
         property(cc.Node)
@@ -73,6 +107,9 @@ var GameUI = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], GameUI.prototype, "game_2", void 0);
+    __decorate([
+        property(cc.Node)
+    ], GameUI.prototype, "game_3", void 0);
     GameUI = __decorate([
         ccclass
     ], GameUI);

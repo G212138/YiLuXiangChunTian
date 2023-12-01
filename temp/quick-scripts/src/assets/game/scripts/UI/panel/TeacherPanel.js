@@ -25,7 +25,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var FrameMsgType_1 = require("../../../../frame/scripts/Data/FrameMsgType");
 var ListenerManager_1 = require("../../../../frame/scripts/Manager/ListenerManager");
-var ReportManager_1 = require("../../../../frame/scripts/Manager/ReportManager");
 var UIManager_1 = require("../../../../frame/scripts/Manager/UIManager");
 var BaseTeacherPanel_1 = require("../../../../frame/scripts/UI/Panel/BaseTeacherPanel");
 var UIHelp_1 = require("../../../../frame/scripts/Utils/UIHelp");
@@ -54,7 +53,7 @@ var TeacherPanel = /** @class */ (function (_super) {
         if (this._btn_save) {
             this._btn_save.active = !isEdit;
         }
-        // this._btn_save.active = true;
+        this._btn_save.active = true;
     };
     /**
      * 设置界面（这里已经拿到了网络请求数据）
@@ -88,13 +87,12 @@ var TeacherPanel = /** @class */ (function (_super) {
     };
     // 保存课件按钮
     TeacherPanel.prototype.onBtnSaveClicked = function () {
-        var isEdit = EditorManager_1.EditorManager.isSupportEdit();
-        if (!isEdit || ReportManager_1.ReportManager.isAllOver) {
-            UIHelp_1.UIHelp.showSubmissionPanel();
-        }
-        else {
-            UIHelp_1.UIHelp.showTip('请先完成一遍题目');
-        }
+        // const isEdit = EditorManager.isSupportEdit();
+        // if (!isEdit || ReportManager.isAllOver) {
+        UIHelp_1.UIHelp.showSubmissionPanel();
+        // } else {
+        //     UIHelp.showTip('请先完成一遍题目');
+        // }
     };
     // 预览课件按钮
     TeacherPanel.prototype.onBtnViewClicked = function () {
